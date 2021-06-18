@@ -125,7 +125,7 @@ function PickerAndroid(props: PickerAndroidProps, ref: PickerRef): React.Node {
           const children = React.Children.toArray(props.children).filter(
             (item) => item != null,
           );
-          const value = children[position].props.value;
+          const value = children[position]?.props.value;
           if (props.selectedValue !== value) {
             onValueChange(value, position);
           }
